@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2><strong>Form Pendaftaran</strong></h2>
+    <form action="proses.php" method="post" enctype="multipart/form-data">
+    <fieldset>
+        <legend>Pendaftaran siswa</legend>
+        <label for="nama">Nama Lengkap:</label>
+        <input type="text" id="nama" name="nama" placeholder="Masukkan nama lengkap" required>
+        <br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="contoh@email.com" required>
+        <br><br>
+        
+        <!--3.Password field dengan place holderdan required-->
+        <label for="email">Alamat Email:</label><br>
+        <input type="password" id="password" name="password" placeholder="Masukkan password Anda" required>
+        <br><br>
+
+        <!--4. Radio Button (pilih salah satu ) dengan value & required -->
+        <label>Jenis Kelamin:</label><br>
+        <input type="radio" id="jk_l" name="gender" value="laki-laki" required>
+        <label for="jk_l">Laki-laki</label><br>
+        <input type="radio" id="jk_p" name="gender" value="perempuan" required>
+        <label for="jk_p">Perempuan</label><br>
+
+        <!-- 5. (Pilih satu atau lebih ) dengan value-->
+        <label>Hobi/Minat:</label><br>
+        <input type="checkbox" id="hobi_coding" name="hobi[]" value="coding">
+        <label for="hobi_coding">Coding </label><br>
+        <input type="checkbox" id="hobi_desain" name="hobi[]" value="desain">
+        <label for="hobi_desain">desain</label><br>
+        <input type="checkbox" id="hobi_musik" name="hobi[]" value="musik">
+        <label for="hobi_musik">musik</label><br>
+
+        <!-- 6. Dropdown ( Select & option ) dengan value-->
+         <label for="jurusan">Pilihan Jurusan:</label><br>
+         <select id="jurusan" name="jurusan" required>
+            <option value="">--Pilih Jurusan</option>
+            <option value="RPL">rekayasa perangkat lunak (RPL)</option>
+            <option value="TKJ">teknik komputer jaringan (TKJ)</option>
+            <option value="PPLG">perancangan dan pengembangan perangkat lunak (PPLG)</option>
+         </select><br><br>
+
+         <!-- 7. Textarea dengan placeholder dan required-->
+         <label for="alamat">Alamat:</label><br>
+         <textarea id="alamat" name="alamat" rows="4" cols="40" placeholder="Masukkan alamat lengkap Anda disini ..." required></textarea><br><br>
+        
+        <!-- Tombol Submit-->
+    <button type="submit">Kirim data</button>
+    </fieldset>
+    </form>
+</body>
+</html>
